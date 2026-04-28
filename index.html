@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anh Quân &amp; Vân Anh — Lễ Vu Quy · 10.05.2026</title>
+    <meta name="description" content="Trân trọng kính mời bạn đến dự Lễ Vu Quy của Anh Quân và Vân Anh" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;1,300;1,400&family=Dancing+Script:wght@400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <!-- ── NHẠC NỀN — thêm file vào music/wedding.mp3 ─────── -->
+    <audio id="bgMusic" loop>
+      <source src="music/wedding.mp3" type="audio/mpeg" />
+    </audio>
+
+    <button class="music-btn" id="musicToggle" aria-label="Bật nhạc nền">♪</button>
+
+    <!-- ── MÀN HÌNH MỞ THIỆP ─────────────────────────────── -->
+    <div class="opening" id="opening">
+      <div class="opening__card">
+        <svg class="opening__ornament" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="0" y1="30" x2="72" y2="30" stroke="currentColor" stroke-width="0.5"/>
+          <polygon points="80,30 90,24 100,30 90,36" fill="currentColor" opacity="0.7"/>
+          <polygon points="100,30 110,24 120,30 110,36" fill="currentColor"/>
+          <polygon points="120,30 130,24 140,30 130,36" fill="currentColor" opacity="0.7"/>
+          <line x1="148" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="0.5"/>
+        </svg>
+
+        <p class="opening__tag">Trân trọng kính mời</p>
+
+        <h1 class="opening__names">
+          <span>Anh Quân</span>
+          <span class="opening__and">&amp;</span>
+          <span>Vân Anh</span>
+        </h1>
+
+        <p class="opening__date">Chủ nhật · 10 · 05 · 2026</p>
+
+        <svg class="opening__ornament" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <line x1="0" y1="30" x2="72" y2="30" stroke="currentColor" stroke-width="0.5"/>
+          <polygon points="80,30 90,24 100,30 90,36" fill="currentColor" opacity="0.7"/>
+          <polygon points="100,30 110,24 120,30 110,36" fill="currentColor"/>
+          <polygon points="120,30 130,24 140,30 130,36" fill="currentColor" opacity="0.7"/>
+          <line x1="148" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="0.5"/>
+        </svg>
+
+        <button class="opening__btn" id="openingBtn">
+          Xem thiệp &nbsp;✦
+        </button>
+      </div>
+    </div>
+
+    <!-- ── TRANG CHÍNH ────────────────────────────────────── -->
+    <div class="site" id="site" aria-hidden="true">
+
+      <!-- NAV -->
+      <nav class="nav" id="nav">
+        <div class="nav__inner">
+          <a href="#hero" class="nav__logo">AQ &amp; VA</a>
+          <ul class="nav__links">
+            <li><a href="#story">Chúng tôi</a></li>
+            <li><a href="#details">Lễ cưới</a></li>
+            <li><a href="#savedate">Lịch</a></li>
+            <li><a href="#family">Gia đình</a></li>
+            <li><a href="#rsvp">Xác nhận</a></li>
+          </ul>
+          <button class="nav__burger" id="navBurger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- HERO -->
+      <section class="hero" id="hero">
+        <div class="hero__inner">
+          <p class="hero__tag">Lễ Vu Quy</p>
+          <div class="hero__ornament" aria-hidden="true">✦ &nbsp; ✦ &nbsp; ✦</div>
+          <h2 class="hero__names">
+            <span>Anh Quân</span>
+            <span class="hero__and">&amp;</span>
+            <span>Vân Anh</span>
+          </h2>
+          <p class="hero__date">10 · 05 · 2026</p>
+          <a href="#story" class="hero__scroll">
+            <span class="hero__scroll-line"></span>
+          </a>
+        </div>
+      </section>
+
+      <!-- COUNTDOWN -->
+      <section class="countdown-section">
+        <p class="countdown-section__label">Còn lại</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown__item">
+            <span class="countdown__num" id="days">00</span>
+            <span class="countdown__unit">Ngày</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__num" id="hours">00</span>
+            <span class="countdown__unit">Giờ</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__num" id="minutes">00</span>
+            <span class="countdown__unit">Phút</span>
+          </div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__item">
+            <span class="countdown__num" id="seconds">00</span>
+            <span class="countdown__unit">Giây</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUR STORY (sáng) -->
+      <section class="section story" id="story">
+        <div class="section__inner">
+          <p class="section__tag">Chúng tôi</p>
+          <h2 class="section__title">Câu chuyện của chúng tôi</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+          <div class="story__grid">
+            <div class="story__image-wrap">
+              <img src="images/web/HTC07474.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+            </div>
+            <div class="story__text">
+              <blockquote class="story__quote">
+                "Trong cuộc đời này, điều may mắn nhất là được yêu và được yêu lại."
+              </blockquote>
+              <p>
+                Chúng tôi — <strong>Anh Quân</strong> và <strong>Vân Anh</strong> — rất hạnh phúc
+                khi được chia sẻ khoảnh khắc trọng đại này cùng những người thân yêu nhất.
+              </p>
+              <p>
+                Sau bao năm bên nhau, chúng tôi quyết định cùng bước sang một chương mới của cuộc
+                đời. Sự hiện diện của bạn sẽ là món quà ý nghĩa nhất với chúng tôi trong ngày hôm
+                đó.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DETAILS (tối) -->
+      <section class="section section--dark details" id="details">
+        <div class="section__inner">
+          <p class="section__tag">Lễ Vu Quy</p>
+          <h2 class="section__title">Thông tin lễ Vu Quy</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+
+          <div class="details__cards">
+            <div class="details__card">
+              <div class="details__icon">🎊</div>
+              <h3>Tiệc cưới</h3>
+              <p class="details__main">16:00</p>
+              <p>Thứ Bảy, 09 tháng 05 năm 2026</p>
+              <p class="details__note">(Tức ngày 23/03 năm Bính Ngọ)</p>
+            </div>
+            <div class="details__card details__card--featured">
+              <div class="details__icon">🌸</div>
+              <h3>Lễ Vu Quy</h3>
+              <p class="details__main">10:30</p>
+              <p>Chủ Nhật, 10 tháng 05 năm 2026</p>
+              <p class="details__note">(Tức ngày 24/03 năm Bính Ngọ)</p>
+            </div>
+            <div class="details__card">
+              <div class="details__icon">🏡</div>
+              <h3>Địa điểm</h3>
+              <p class="details__main">Tư Gia Nhà Gái</p>
+              <p>Xóm 6, Nam Hưng Tây, Thái Sơn</p>
+              <p>Thái Thuỵ, Thái Bình</p>
+              <p class="details__note">(Nay là Tây Thái Ninh, Hưng Yên)</p>
+            </div>
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="timeline">
+            <p class="timeline__heading">Lịch trình ngày Vu Quy — 10.05.2026</p>
+            <div class="timeline__list">
+              <div class="timeline__item">
+                <span class="timeline__time">10:00</span>
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <h4>Đón khách</h4>
+                  <p>Trân trọng đón tiếp quý khách</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__time">10:30</span>
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <h4>Lễ Vu Quy</h4>
+                  <p>Nghi lễ tại tư gia nhà gái</p>
+                </div>
+              </div>
+              <div class="timeline__item">
+                <span class="timeline__time">12:15</span>
+                <div class="timeline__dot"></div>
+                <div class="timeline__body">
+                  <h4>Rước dâu</h4>
+                  <p>Đưa cô dâu về nhà chồng</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAP -->
+          <div class="details__map">
+            <iframe
+              title="Bản đồ Nhà Gái"
+              src="https://www.google.com/maps?q=Xom+6+Nam+Hung+Tay+Thai+Son+Thai+Thuy+Thai+Binh+Vietnam&output=embed&hl=vi"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <a
+              href="https://maps.app.goo.gl/EMZuzfYvWvD7rFwJA"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="details__map-link"
+            >Xem trên Google Maps →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SAVE THE DATE / CALENDAR (sáng) -->
+      <section class="section savedate" id="savedate">
+        <div class="section__inner">
+          <p class="section__tag">Save the Date</p>
+          <h2 class="section__title">Đánh dấu lịch ngay nhé!</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+
+          <div class="calendar">
+            <div class="calendar__header">
+              <span class="calendar__month">Tháng 05</span>
+              <span class="calendar__year">2026</span>
+            </div>
+            <div class="calendar__grid">
+              <span class="calendar__dow">T2</span>
+              <span class="calendar__dow">T3</span>
+              <span class="calendar__dow">T4</span>
+              <span class="calendar__dow">T5</span>
+              <span class="calendar__dow">T6</span>
+              <span class="calendar__dow">T7</span>
+              <span class="calendar__dow">CN</span>
+              <!-- Tháng 5/2026 bắt đầu thứ Sáu (T6) → 4 ô trống -->
+              <span class="calendar__empty"></span>
+              <span class="calendar__empty"></span>
+              <span class="calendar__empty"></span>
+              <span class="calendar__empty"></span>
+              <span class="calendar__day">1</span>
+              <span class="calendar__day">2</span>
+              <span class="calendar__day">3</span>
+              <span class="calendar__day">4</span>
+              <span class="calendar__day">5</span>
+              <span class="calendar__day">6</span>
+              <span class="calendar__day">7</span>
+              <span class="calendar__day">8</span>
+              <span class="calendar__day calendar__day--tiec">
+                9
+                <span class="calendar__heart">🎊</span>
+              </span>
+              <span class="calendar__day calendar__day--wedding">
+                10
+                <span class="calendar__heart">♥</span>
+              </span>
+              <span class="calendar__day">11</span>
+              <span class="calendar__day">12</span>
+              <span class="calendar__day">13</span>
+              <span class="calendar__day">14</span>
+              <span class="calendar__day">15</span>
+              <span class="calendar__day">16</span>
+              <span class="calendar__day">17</span>
+              <span class="calendar__day">18</span>
+              <span class="calendar__day">19</span>
+              <span class="calendar__day">20</span>
+              <span class="calendar__day">21</span>
+              <span class="calendar__day">22</span>
+              <span class="calendar__day">23</span>
+              <span class="calendar__day">24</span>
+              <span class="calendar__day">25</span>
+              <span class="calendar__day">26</span>
+              <span class="calendar__day">27</span>
+              <span class="calendar__day">28</span>
+              <span class="calendar__day">29</span>
+              <span class="calendar__day">30</span>
+              <span class="calendar__day">31</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAMILY (sáng) — nhà gái lên trước -->
+      <section class="section family" id="family">
+        <div class="section__inner">
+          <p class="section__tag">Gia đình</p>
+          <h2 class="section__title">Hai gia đình</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+          <div class="family__grid">
+            <div class="family__side">
+              <div class="family__badge">Nhà gái</div>
+              <div class="family__member">
+                <span class="family__role">Ông</span>
+                <span class="family__name">Nguyễn Bá Nam</span>
+              </div>
+              <div class="family__member">
+                <span class="family__role">Bà</span>
+                <span class="family__name">Phạm Thị Hiên</span>
+              </div>
+              <div class="family__child">
+                <p>Cô dâu</p>
+                <p class="family__child-name">Vân Anh</p>
+              </div>
+            </div>
+
+            <div class="family__center">
+              <svg viewBox="0 0 60 55" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M30 50 C15 38, 0 28, 0 16 C0 7 7 0 16 0 C22 0 27 4 30 8 C33 4 38 0 44 0 C53 0 60 7 60 16 C60 28 45 38 30 50Z"/>
+              </svg>
+            </div>
+
+            <div class="family__side">
+              <div class="family__badge">Nhà trai</div>
+              <div class="family__member">
+                <span class="family__role">Ông</span>
+                <span class="family__name">Nguyễn Xuân Bính</span>
+              </div>
+              <div class="family__member">
+                <span class="family__role">Bà</span>
+                <span class="family__name">Trần Thị Thanh Nhàn</span>
+              </div>
+              <div class="family__child">
+                <p>Chú rể</p>
+                <p class="family__child-name">Anh Quân</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY (tối) -->
+      <section class="section section--dark gallery" id="gallery">
+        <div class="section__inner">
+          <p class="section__tag">Khoảnh khắc</p>
+          <h2 class="section__title">Album ảnh</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+          <div class="slideshow" id="photoSlideshow">
+            <div class="slideshow__stage">
+              <div class="slide active">
+                <img src="images/web/HTC06939.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07004.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07372.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07474.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07513.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07816.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC07742.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC08082.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC08308.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+              <div class="slide">
+                <img src="images/web/HTC08526.jpg" alt="Anh Quân và Vân Anh" loading="lazy" />
+              </div>
+            </div>
+
+            <button class="slideshow__btn slideshow__btn--prev" id="slidePrev" aria-label="Ảnh trước">&#8249;</button>
+            <button class="slideshow__btn slideshow__btn--next" id="slideNext" aria-label="Ảnh sau">&#8250;</button>
+            <div class="slideshow__dots" id="slideDots"></div>
+            <span class="slideshow__counter" id="slideCounter">1 / 10</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- RSVP (sáng) -->
+      <section class="section rsvp" id="rsvp">
+        <div class="section__inner">
+          <p class="section__tag">Xác nhận tham dự</p>
+          <h2 class="section__title">Bạn có thể đến không?</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <span></span><span>✦</span><span></span>
+          </div>
+          <p class="rsvp__desc">
+            Sự hiện diện của bạn là niềm vui lớn nhất của chúng tôi.<br />
+            Vui lòng xác nhận trước ngày <strong>30.04.2026</strong>.
+          </p>
+
+          <form
+            class="rsvp__form"
+            id="rsvpForm"
+            data-sheet-url="https://script.google.com/macros/s/AKfycbz4y2AKUF2rh2U0kV6m-0jthctMOCR8FCUnJnHNxNKJN2nEICN-w1amyHY8TIJ6iqdS/exec"
+          >
+            <div class="form__row">
+              <div class="form__group">
+                <label for="name">Họ và tên <span class="required">*</span></label>
+                <input type="text" id="name" name="name" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="form__group">
+                <label for="phone">Số điện thoại</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="0901 234 567"
+                  pattern="(0|\+84)[0-9]{9}"
+                  title="Số điện thoại Việt Nam hợp lệ, VD: 0901234567"
+                />
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="example@email.com" />
+            </div>
+
+            <div class="form__group">
+              <label>Bạn có thể tham dự? <span class="required">*</span></label>
+              <div class="form__radio-group">
+                <label class="radio-option">
+                  <input type="radio" name="attend" value="Có, tôi sẽ tham dự" required />
+                  <span>Có, tôi sẽ tham dự</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="attend" value="Rất tiếc, tôi không thể đến" />
+                  <span>Rất tiếc, tôi không thể đến</span>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="attend" value="Chưa chắc chắn" />
+                  <span>Chưa chắc chắn</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__group">
+                <label for="guests">Số người đi cùng</label>
+                <select id="guests" name="guests">
+                  <option value="0">Chỉ mình tôi</option>
+                  <option value="1">1 người</option>
+                  <option value="2">2 người</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label for="side">Khách mời của</label>
+                <select id="side" name="side">
+                  <option value="Nhà gái">Nhà gái (Vân Anh)</option>
+                  <option value="Nhà trai">Nhà trai (Anh Quân)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__group">
+              <label for="note">Lời nhắn gửi đến cô dâu chú rể</label>
+              <textarea
+                id="note"
+                name="note"
+                rows="3"
+                placeholder="Hãy để lại một lời chúc, kỷ niệm hay bất cứ điều gì bạn muốn nhắn gửi đến Anh Quân &amp; Vân Anh nhân ngày trọng đại này..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="form__submit">Gửi xác nhận</button>
+            <p class="form__success" id="formSuccess">
+              Cảm ơn bạn! Chúng tôi đã nhận được xác nhận.<br />Hẹn gặp ngày 10.05.2026 🌿
+            </p>
+          </form>
+
+          <!-- QR CODE MỪNG CƯỚI -->
+          <div class="gift">
+            <div class="ornament-divider" aria-hidden="true">
+              <span></span><span>♥</span><span></span>
+            </div>
+            <p class="gift__title">Quà mừng cưới</p>
+            <p class="gift__desc">
+              Sự hiện diện của bạn là món quà quý giá nhất với chúng tôi.<br />
+              Nếu bạn muốn gửi thêm lời chúc qua chuyển khoản, xin dùng thông tin bên dưới:
+            </p>
+            <div class="gift__qr-wrap">
+              <img
+                src="images/qrcode_full.jpg"
+                alt="QR chuyển khoản mừng cưới Anh Quân &amp; Vân Anh"
+                class="gift__qr"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <div class="footer__inner">
+          <svg class="footer__ornament" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <line x1="0" y1="30" x2="72" y2="30" stroke="currentColor" stroke-width="0.5"/>
+            <polygon points="80,30 90,24 100,30 90,36" fill="currentColor" opacity="0.7"/>
+            <polygon points="100,30 110,24 120,30 110,36" fill="currentColor"/>
+            <polygon points="120,30 130,24 140,30 130,36" fill="currentColor" opacity="0.7"/>
+            <line x1="148" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="0.5"/>
+          </svg>
+          <p class="footer__names">Anh Quân &amp; Vân Anh</p>
+          <p class="footer__date">10 · 05 · 2026</p>
+          <p class="footer__thanks">
+            Sự hiện diện của quý vị là niềm vinh hạnh cho gia đình chúng tôi.
+          </p>
+        </div>
+      </footer>
+
+    </div><!-- /site -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
